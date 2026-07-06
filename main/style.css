@@ -22,6 +22,9 @@
   --secondary-background: #f8fafc;
   --secondary-text: #334155;
   --secondary-border: #cbd5e1;
+  --field-background: #ffffff;
+  --field-border: #cbd5e1;
+  --field-focus: rgba(37, 99, 235, 0.16);
 }
 
 body[data-theme="dark"] {
@@ -44,6 +47,9 @@ body[data-theme="dark"] {
   --secondary-background: #1e293b;
   --secondary-text: #e2e8f0;
   --secondary-border: #475569;
+  --field-background: #111827;
+  --field-border: #475569;
+  --field-focus: rgba(96, 165, 250, 0.2);
 }
 
 body {
@@ -160,4 +166,64 @@ button:active {
 
 .theme-button:hover {
   background: var(--secondary-background);
+}
+
+.partner-section {
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 1px solid var(--panel-border);
+  text-align: left;
+}
+
+.partner-section h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.partner-section p {
+  margin-bottom: 20px;
+}
+
+.partner-form {
+  display: grid;
+  gap: 10px;
+}
+
+.partner-form label {
+  color: var(--page-text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.partner-form input,
+.partner-form select,
+.partner-form textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 12px;
+  border: 1px solid var(--field-border);
+  border-radius: 8px;
+  color: var(--page-text);
+  background: var(--field-background);
+  font: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.partner-form textarea {
+  min-height: 128px;
+  resize: vertical;
+}
+
+.partner-form input:focus,
+.partner-form select:focus,
+.partner-form textarea:focus {
+  outline: 0;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--field-focus);
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 8px;
 }

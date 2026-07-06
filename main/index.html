@@ -18,6 +18,38 @@
       <button type="button" id="generateButton">번호 만들기</button>
       <button type="button" class="theme-button" id="themeButton" aria-pressed="false">다크 모드</button>
     </div>
+
+    <section class="partner-section" aria-labelledby="partnerTitle">
+      <h2 id="partnerTitle">제휴 문의</h2>
+      <p>브랜드 제휴, 광고, 협업 제안은 아래 양식으로 보내주세요.</p>
+
+      <form class="partner-form" action="https://formspree.io/f/mnjkweav" method="POST">
+        <input type="hidden" name="_subject" value="새 제휴 문의가 도착했습니다">
+
+        <label for="name">이름</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="email">이메일</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="company">회사/브랜드</label>
+        <input id="company" name="company" type="text" autocomplete="organization">
+
+        <label for="partnershipType">제휴 유형</label>
+        <select id="partnershipType" name="partnership_type" required>
+          <option value="">선택해주세요</option>
+          <option value="advertising">광고 제휴</option>
+          <option value="content">콘텐츠 협업</option>
+          <option value="event">이벤트/프로모션</option>
+          <option value="other">기타</option>
+        </select>
+
+        <label for="message">문의 내용</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="submit-button">문의 보내기</button>
+      </form>
+    </section>
   </main>
 
   <script src="script.js"></script>
