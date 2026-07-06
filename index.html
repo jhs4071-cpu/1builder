@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 번호 생성기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>로또 번호 생성기</h1>
+    <p>버튼을 누르면 1부터 45까지 중복 없는 번호가 생성됩니다.</p>
+
+    <div class="numbers" id="numbers" aria-live="polite"></div>
+    <div class="bonus" id="bonus" aria-live="polite">행운의 번호를 만들어보세요.</div>
+
+    <div class="actions">
+      <button type="button" id="generateButton">번호 만들기</button>
+      <button type="button" class="theme-button" id="themeButton" aria-pressed="false">다크 모드</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
