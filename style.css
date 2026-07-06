@@ -168,6 +168,7 @@ button:active {
   background: var(--secondary-background);
 }
 
+.holiday-section,
 .partner-section {
   margin-top: 34px;
   padding-top: 30px;
@@ -175,27 +176,33 @@ button:active {
   text-align: left;
 }
 
+.holiday-section h2,
 .partner-section h2 {
   margin: 0 0 8px;
   font-size: 24px;
   letter-spacing: 0;
 }
 
+.holiday-section p,
 .partner-section p {
   margin-bottom: 20px;
 }
 
+.holiday-form,
 .partner-form {
   display: grid;
   gap: 10px;
 }
 
+.holiday-form label,
 .partner-form label {
   color: var(--page-text);
   font-size: 14px;
   font-weight: 700;
 }
 
+.holiday-form input,
+.holiday-form select,
 .partner-form input,
 .partner-form select,
 .partner-form textarea {
@@ -215,6 +222,8 @@ button:active {
   resize: vertical;
 }
 
+.holiday-form input:focus,
+.holiday-form select:focus,
 .partner-form input:focus,
 .partner-form select:focus,
 .partner-form textarea:focus {
@@ -223,7 +232,70 @@ button:active {
   box-shadow: 0 0 0 4px var(--field-focus);
 }
 
+.holiday-status {
+  margin: 18px 0 12px;
+  color: var(--bonus-text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.holiday-list {
+  display: grid;
+  gap: 10px;
+  max-height: 340px;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  list-style: none;
+}
+
+.holiday-list li {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 4px 12px;
+  padding: 12px;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  background: var(--secondary-background);
+}
+
+.holiday-list span {
+  grid-row: span 2;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.holiday-list strong {
+  color: var(--page-text);
+  line-height: 1.35;
+}
+
+.holiday-list small {
+  color: var(--muted-text);
+}
+
+.api-credit {
+  margin: 14px 0 0;
+  font-size: 13px;
+}
+
+.api-credit a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
 .submit-button {
   width: 100%;
   margin-top: 8px;
+}
+
+@media (max-width: 420px) {
+  .holiday-list li {
+    grid-template-columns: 1fr;
+  }
+
+  .holiday-list span {
+    grid-row: auto;
+  }
 }

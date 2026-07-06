@@ -18,6 +18,74 @@
       <button type="button" id="generateButton">번호 만들기</button>
       <button type="button" class="theme-button" id="themeButton" aria-pressed="false">다크 모드</button>
     </div>
+
+    <section class="holiday-section" aria-labelledby="holidayTitle">
+      <h2 id="holidayTitle">다른 나라 공휴일</h2>
+      <p>
+        Nager.Date API를 참고해 국가와 연도를 선택하면 해외 공휴일을 확인할 수 있습니다.
+      </p>
+
+      <form class="holiday-form" id="holidayForm">
+        <label for="countryCode">국가</label>
+        <select id="countryCode" name="country_code">
+          <option value="US">미국</option>
+          <option value="JP">일본</option>
+          <option value="CN">중국</option>
+          <option value="GB">영국</option>
+          <option value="FR">프랑스</option>
+          <option value="DE">독일</option>
+          <option value="CA">캐나다</option>
+          <option value="AU">호주</option>
+        </select>
+
+        <label for="holidayYear">연도</label>
+        <input id="holidayYear" name="holiday_year" type="number" min="1900" max="2100" required>
+
+        <button type="submit" class="submit-button">공휴일 불러오기</button>
+      </form>
+
+      <div class="holiday-status" id="holidayStatus" aria-live="polite">
+        국가와 연도를 선택한 뒤 공휴일을 불러오세요.
+      </div>
+      <ul class="holiday-list" id="holidayList"></ul>
+
+      <p class="api-credit">
+        데이터 출처:
+        <a href="https://date.nager.at/" target="_blank" rel="noopener noreferrer">Nager.Date</a>
+      </p>
+    </section>
+
+    <section class="partner-section" aria-labelledby="partnerTitle">
+      <h2 id="partnerTitle">제휴 문의</h2>
+      <p>브랜드 제휴, 광고, 협업 제안은 아래 양식으로 보내주세요.</p>
+
+      <form class="partner-form" action="https://formspree.io/f/mnjkweav" method="POST">
+        <input type="hidden" name="_subject" value="새 제휴 문의가 도착했습니다">
+
+        <label for="name">이름</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="email">이메일</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="company">회사/브랜드</label>
+        <input id="company" name="company" type="text" autocomplete="organization">
+
+        <label for="partnershipType">제휴 유형</label>
+        <select id="partnershipType" name="partnership_type" required>
+          <option value="">선택해주세요</option>
+          <option value="advertising">광고 제휴</option>
+          <option value="content">콘텐츠 협업</option>
+          <option value="event">이벤트/프로모션</option>
+          <option value="other">기타</option>
+        </select>
+
+        <label for="message">문의 내용</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="submit-button">문의 보내기</button>
+      </form>
+    </section>
   </main>
 
   <script src="script.js"></script>
